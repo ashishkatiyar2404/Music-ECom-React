@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap");
+
+:root {
+  --primary-color: rgb(0, 0, 0);
+  --secondary-color: rgb(255, 255, 255);
+
+  --linear-gradient-1: rgb(133, 255, 189, 0.4);
+  --linear-gradient-1-shade: rgb(133, 255, 189, 0.3);
+  --linear-gradient-2: rgb(255, 251, 125, 0.4);
+  --linear-gradient-2-shade: rgb(255, 251, 125, 0.3);
+  --color-white: rgb(255, 255, 255);
+  --color-white-shade: rgb(250, 250, 250);
+  --color-new-badge: rgb(207, 255, 229);
+  --color-bg-color: rgb(250, 235, 215);
+  --color-num-badge: rgb(133, 255, 189, 1);
+  --color-gray: rgb(128, 128, 128);
+  --color-btn-login: rgb(17, 17, 17);
+  --color-heading: rgb(47 45 45);
+}
+
+* {
+  font-family: "Roboto", sans-serif;
+  text-decoration: none;
+  word-wrap: break-word;
+  list-style: none;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
