@@ -1,0 +1,149 @@
+.hero__section {
+  background-image: linear-gradient(
+      45deg,
+      var(--linear-gradient-1-shade) 50%,
+      var(--linear-gradient-2-shade) 50%
+    ),
+    url(/src/Assets/Images/hero_img.jpg);
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: cover;
+  position: relative;
+}
+.heading__text-box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
+
+.heading__primary {
+  color: var(--color-heading);
+  text-transform: uppercase;
+  backface-visibility: hidden;
+}
+
+.heading__primary-main {
+  display: block;
+  letter-spacing: 2.5rem;
+  font-size: 6rem;
+  font-weight: 400;
+}
+
+.heading__primary-sub {
+  display: block;
+  font-size: 2rem;
+  font-weight: 900;
+  letter-spacing: 1rem;
+}
+
+.btn__white {
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 1.5rem 4rem;
+  display: inline-block;
+  border-radius: 10rem;
+  position: relative;
+  font-size: 1.6rem;
+  background-color: var(--color-white);
+  color: var(--color-gray);
+  margin: 1.6rem;
+}
+
+/* featured categories */
+.featured__section {
+  height: 75vh;
+}
+
+.featured__heading-container {
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.featured__heading {
+  font-size: 3.2rem;
+  font-weight: 700;
+}
+
+.featured__items-container {
+  height: 55vh;
+  background-color: var(--color-white);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.featured__items-container div {
+  width: 30rem;
+
+  padding: 1rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.featured__items-container div:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transition: all 0.3s ease;
+}
+
+.featured__items-container div > img {
+  width: 100%;
+  height: auto;
+}
+
+.featured__items-container div > span {
+  text-align: center;
+}
+hr {
+  width: 70%;
+}
+
+/* SECTION 3  WHAT'S NEW */
+.new__arrival-section {
+  height: 80vh;
+  margin-bottom: 10rem;
+}
+
+.new__items-container {
+  background-color: var(--color-bg-color);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.new__brand div {
+  position: relative;
+  width: 100%;
+}
+
+.new {
+  width: fit-content;
+  padding: 0.5rem;
+  background-color: var(--color-new-badge);
+  border-radius: 2px;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+}
+
+.new__brand div > img {
+  width: 22rem;
+  height: 50rem;
+  object-fit: fill;
+}
+
+.new__brand span {
+  display: block;
+  text-align: center;
+  font-weight: 700;
+}
+
+.guitar__image {
+  width: 24rem;
+}
