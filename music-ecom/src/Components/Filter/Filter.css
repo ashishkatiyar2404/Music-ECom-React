@@ -1,0 +1,129 @@
+/* FILTER */
+
+.filter {
+  padding: 0 2rem;
+}
+.filter div > span {
+  /* font-size: 2rem;
+  font-weight: 600; */
+}
+.clear {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+.clear span {
+  cursor: pointer;
+}
+.slider {
+  margin-bottom: 1rem;
+  border: 1px solid violet;
+}
+
+.slider__container {
+  /* display: flex; */
+  justify-content: space-between;
+  /* cursor: pointer; */
+  border: 1px solid violet;
+}
+
+.slider__container > label {
+  display: block;
+  /* width: 100%; */
+  /* color: pink; */
+}
+.slider__container > input {
+  /* width: 100%; */
+  /* display: block; */
+  /* border: 10px solid black; */
+}
+
+.slider__Price {
+  /* display: flex; */
+  /* justify-content: space-between; */
+  width: 30%;
+}
+
+/* .slider__Price > span {
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+} */
+
+.category,
+.product__rating,
+.product__sorting {
+  /* margin-bottom: rem; */
+  margin-top: 1rem;
+}
+
+.category div > input,
+.product__rating div > input,
+.product__sorting div > input {
+  cursor: pointer;
+  /* width: 1.6rem;
+  height: 1.6rem;
+  margin-right: 1rem; */
+}
+.category div > * {
+  /* font-size: 1.6rem; */
+}
+
+/* FILTER */
+.product__page {
+  /* display: grid;
+  grid-template-columns: 20% 1fr;
+  margin-top: 1rem; */
+}
+
+.filter {
+  /* padding: 0 2rem; */
+}
+.filter div > span {
+  /* font-size: 1.8rem;
+  font-weight: 700; */
+}
+.clear {
+  /* display: flex;
+  justify-content: space-between;
+  margin-bottom: 3rem; */
+}
+.clear span {
+  cursor: pointer;
+}
+
+.slider,
+.slider__container {
+  /* display: flex;
+  justify-content: space-between;
+  width: 80%; */
+  cursor: pointer;
+}
+
+.slider__range {
+  /* display: flex;
+  justify-content: space-between;
+  width: 15%; */
+}
+
+.slider__range > span {
+  /* margin-right: 1.5rem;
+  margin-bottom: 2rem; */
+}
+
+.category,
+.product__rating,
+.product__sorting {
+  /* margin-bottom: 3rem; */
+}
+
+.category div > input,
+.product__rating div > input,
+.product__sorting div > input {
+  cursor: pointer;
+  /* width: 1.6rem;
+  height: 1.6rem;
+  margin-right: 1rem; */
+}
+.category div > * {
+  /* font-size: 1.6rem; */
+}

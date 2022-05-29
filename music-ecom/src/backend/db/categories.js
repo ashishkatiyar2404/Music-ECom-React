@@ -8,20 +8,26 @@ import { v4 as uuid } from "uuid";
 export const categories = [
   {
     _id: uuid(),
-    categoryName: "fiction",
-    description:
-      "literature in the form of prose, especially novels, that describes imaginary events and people",
+    categoryName: "Guitar",
+    categoryImage:
+      "https://music-e-commerce.netlify.app/assets/images/featured__guitar1.jpg",
   },
   {
     _id: uuid(),
-    categoryName: "non-fiction",
-    description:
-      "Non-fiction is writing that gives information or describes real events, rather than telling a story.",
+    categoryName: "Piano",
+    categoryImage:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Piano.svg/1200px-Piano.svg.png",
   },
   {
     _id: uuid(),
-    categoryName: "horror",
-    description:
-      "Meant to cause discomfort and fear for both the character and readers, horror writers often make use of supernatural and paranormal elements in morbid stories that are sometimes a little too realistic.",
+    categoryName: "Drum",
+    categoryImage:
+      "https://m.media-amazon.com/images/I/8186g7plXaL._SL1500_.jpg",
+  },
+  {
+    _id: uuid(),
+    categoryName: "Xylo",
+    categoryImage:
+      "https://res.cloudinary.com/dk-find-out/image/upload/q_80,w_1920,f_auto/XC1HV40_urds9y.jpg",
   },
 ];

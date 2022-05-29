@@ -1,5 +1,7 @@
 import React from "react";
 import Navbar from "../../Components/Navbar/Navbar";
+import { Link } from "react-router-dom";
+
 import "./Home.css";
 
 // IMAGES IMPORT
@@ -25,15 +27,16 @@ export default function Home() {
         <div className="heading__text-box">
           <h1 className="heading__primary">
             <span className="heading__primary-main">
-              Welcome to Music Store!{" "}
+              Welcome to Music Store!
             </span>
             <span className="heading__primary-sub">
               We have the eminent instruments at lowest prices in India.
             </span>
           </h1>
-          <a href="/" className="btn__white">
+
+          <Link to="/ProductList" className="btn__white">
             Shop Now
-          </a>
+          </Link>
         </div>
       </section>
 
