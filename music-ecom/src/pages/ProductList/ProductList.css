@@ -1,0 +1,31 @@
+:root {
+  --color-gradient-green: rgb(133, 255, 189, 0.5);
+  --color-gradient-yellow: rgb(255, 251, 125, 0.5);
+  --color-rating-star: rgb(218, 165, 32);
+  --color-discount: rgb(0, 128, 0);
+  --color-product-name: rgb(46, 45, 45);
+  --color-gray: rgb(128, 128, 128);
+  --color-products-bg: rgb(245, 245, 220, 0.5);
+}
+
+/* PRODUCT LIST  */
+.flex-container {
+  display: flex;
+  position: relative;
+}
+.filter__fixed {
+  /* position: fixed; */
+}
+
+/* FILTERED PRODUCTS */
+.filtered__products {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: var(--color-products-bg);
+}
+
+.product__page {
+  display: grid;
+  grid-template-columns: 20% 1fr !important;
+  margin-top: 1rem;
+}

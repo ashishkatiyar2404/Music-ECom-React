@@ -20,12 +20,12 @@ export default function Navbar() {
           <ul>
             <button className="btn__login login">Login</button>
             <div>
-              <Link to="/">
+              <Link to="/WishList">
                 <FaHeart className="wishList" />
               </Link>
             </div>
             <div>
-              <Link to="/">
+              <Link to="/CartManagement">
                 <FaShoppingCart className="shopping__cart" />
               </Link>
             </div>

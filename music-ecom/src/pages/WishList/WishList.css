@@ -1,0 +1,68 @@
+:root {
+  --color-wishlist: rgb(255, 0, 0);
+  --color-btn-bg: rgb(133, 255, 189, 0.8);
+  --color-btn-text: rgb(128, 128, 128);
+  --color-gradient-green: rgb(133, 255, 189, 0.5);
+  --color-gradient-yellow: rgb(255, 251, 125, 0.5);
+}
+.heading__container {
+  text-align: center;
+  margin: 3% 0 2% 0;
+}
+.heading__wishlist {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.wishlist__container {
+  display: flex;
+  justify-content: space-between;
+  padding: 0rem 1rem 0rem 1rem;
+}
+.wishlist__item {
+  width: 25%;
+  position: relative;
+  padding: 1rem;
+  margin: 0 1rem;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.wishlist__item img {
+  width: 100%;
+}
+
+/* .wishlist__item i {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  color: var(--color-wishlist);
+  font-size: 2rem;
+  cursor: pointer;
+} */
+
+.wishlist__item span {
+  display: block;
+}
+
+.wishlist__item span,
+.wishlist__item button {
+  text-align: center;
+  margin: 0.5rem 0.2rem;
+}
+/* .wishlist__item button {
+  display: inline;
+} */
+
+.btn__move2cart {
+  /* width: 100%; */
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  border: none;
+  cursor: pointer;
+  color: var(--color-btn-text);
+  background-color: var(--color-btn-bg);
+  background-image: linear-gradient(
+    45deg,
+    var(--color-gradient-green) 0%,
+    var(--color-gradient-yellow) 100%
+  );
+}
