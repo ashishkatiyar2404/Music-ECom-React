@@ -28,7 +28,6 @@ export default function ProductList() {
     }
 
     if (rating) {
-      // debugger;
       sortedProducts = sortedProducts.filter((prod) => prod.rating >= rating);
     }
     if (categoryName) {
@@ -40,14 +39,13 @@ export default function ProductList() {
             );
     }
     if (price) {
-      // debugger;
       sortedProducts = sortedProducts.filter((item) => item.price <= price);
     }
 
-    // if (includeOutOfStock) {
-    //   sortedProducts = sortedProducts.filter((prod) => prod.includeOutOfStock);
-    //   return sortedProducts;
-    // }
+    if (includeOutOfStock) {
+      sortedProducts = sortedProducts.filter((prod) => prod.includeOutOfStock);
+      return sortedProducts;
+    }
 
     return sortedProducts;
   };

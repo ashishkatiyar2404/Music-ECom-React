@@ -4,11 +4,7 @@ import "./Filter.css";
 
 export default function Filter() {
   const { filterInitialState, filterInitialDispatch } = useFilter();
-  // console.log(filterInitialState.price, typeof filterInitialState.price);
 
-  // function ashishHandler(event) {
-  //   console.log(event.target.value);
-  // }
   const sortByAction = (value) => {
     filterInitialDispatch({
       type: "SortByPrice",
@@ -182,7 +178,7 @@ export default function Filter() {
           />
           <label for="high">Price - high to low</label>
         </div>
-        {/* <div>
+        <div>
           <input
             type="checkbox"
             className="high"
@@ -194,7 +190,7 @@ export default function Filter() {
             }
           />
           <label for="high">Include Out Of Stock</label>
-        </div> */}
+        </div>
       </div>
     </main>
   );

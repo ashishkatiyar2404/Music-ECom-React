@@ -41,11 +41,11 @@ const filterReducerFunc = (filterState, filterAction) => {
         ...filterState,
         rating: filterAction.payload,
       };
-    // case "BY_STOCK":
-    //   return {
-    //     ...filterState,
-    //     includeOutOfStock: !filterState.includeOutOfStock,
-    //   };
+    case "BY_STOCK":
+      return {
+        ...filterState,
+        includeOutOfStock: !filterState.includeOutOfStock,
+      };
     default:
       return { ...filterState };
   }
