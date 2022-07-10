@@ -1,26 +1,36 @@
 import React from "react";
-import "./WishList.css";
+import { useCart } from "../../Context/CartContext";
+import { useWishList } from "../../Context/WishListContext";
+// import "./WishList.css";
 
-const WishListCompo = () => {
+const WishListCompo = ({ items }) => {
+  const { cartDispatch } = useCart();
+  const { wishDispatch } = useWishList();
+
   return (
-    <section>
-      <div className="wishlist__container">
-        <div className="wishlist__item">
-          <img src={{}} alt="piano" />
-          {/* <i className="fa-solid fa-heart"></i> */}
-          <span>
-            Mini Jazzmaster Piano
-            {/* {.product name} */}
-          </span>
-          <span>
-            ₹1999
-            {/* {.price} */}
-          </span>
-          <button className="btn__move2cart">Add to cart</button>
-          <button className="btn__move2cart">Remove from WishList</button>
+    <div className="wishlist__container">
+      <div className="wishlist__item">
+        <div className="img__conatiner">
+          <img className="img" src={items.image} alt="piano" />
         </div>
+        <span>{items.title}</span>
+        <span>{items.price}</span>
+        <button
+          className="btn__move2cart"
+          onClick={() => cartDispatch({ type: "ADD_TO_CART", payload: items })}
+        >
+          Add to cart
+        </button>
+        <button
+          className="btn__move2cart"
+          onClick={() =>
+            wishDispatch({ type: "REMOVE_FROM_WISHLIST", payload: items })
+          }
+        >
+          Remove from WishList
+        </button>
       </div>
-    </section>
+    </div>
   );
 };
 

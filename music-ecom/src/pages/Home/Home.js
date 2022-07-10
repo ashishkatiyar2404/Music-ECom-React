@@ -1,27 +1,34 @@
-import React from "react";
-import Navbar from "../../Components/Navbar/Navbar";
-import { Link } from "react-router-dom";
-
 import "./Home.css";
+import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
+import CategoryCards from "./CategoryCards";
 
 // IMAGES IMPORT
-import guitar_wall from "../../Assets/Images/featured__guitar1.jpg";
-import piano from "../../Assets/Images/featured__piano.jpg";
-import drum from "../../Assets/Images/featured__drum.jpg";
-import xylo from "../../Assets/Images/featured__xylo.jpg";
 import brand1 from "../../Assets/Images/new_brand1.jpg";
 import brand2 from "../../Assets/Images/new_brand2.jpg";
 import brand3 from "../../Assets/Images/new_brand3.jpg";
 import brand4 from "../../Assets/Images/new_brand4.jpg";
+import { useFilter } from "../../Context/filterContext";
+
+const useDocumentation = (heading) => {
+  useEffect(() => {
+    document.title = heading;
+  }, [heading]);
+};
 
 export default function Home() {
+  useDocumentation("React Music E-Com");
+
+  const { filterInitialDispatch } = useFilter();
+  useEffect(() => {
+    const clearFilter = () => {
+      filterInitialDispatch({ type: "CLEAR_ALL" });
+    };
+    clearFilter();
+  }, []);
+
   return (
     <div>
-      {/* NAVBAR */}
-      <div className="nav">
-        <Navbar />
-      </div>
-
       {/* HERO SECTION  */}
       <section className="hero__section">
         <div className="heading__text-box">
@@ -33,7 +40,6 @@ export default function Home() {
               We have the eminent instruments at lowest prices in India.
             </span>
           </h1>
-
           <Link to="/ProductList" className="btn__white">
             Shop Now
           </Link>
@@ -41,28 +47,12 @@ export default function Home() {
       </section>
 
       {/* FEATURED SECTION  */}
+
       <section className="featured__section">
         <div className="featured__heading-container">
           <span className="featured__heading ">FEATURED CATEGORIES</span>
         </div>
-        <div className="featured__items-container">
-          <div className="featured__guitar">
-            <img src={guitar_wall} alt="Guitars" />
-            <span className="guitar__text">Guitars</span>
-          </div>
-          <div className="featured__piano">
-            <img src={piano} alt="Pianos" />
-            <span className="piano__text">Pianos</span>
-          </div>
-          <div className="featured__drum">
-            <img src={drum} alt="Drums" />
-            <span className="drum__text">Drums</span>
-          </div>
-          <div className="featured__xylo">
-            <img src={xylo} alt="Xylophones" />
-            <span className="xylo__text">Xylophones</span>
-          </div>
-        </div>
+        <CategoryCards />
       </section>
 
       {/* NEW ARRIVALS  */}

@@ -1,17 +1,29 @@
 import React from "react";
-import Navbar from "../../Components/Navbar/Navbar";
 import WishListCompo from "./WishListCompo";
-
 import "./WishList.css";
+import { useWishList } from "../../Context/WishListContext";
 
 const WishList = () => {
+  const {
+    wishState: { wishList },
+  } = useWishList();
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
       <div className="heading__container">
-        <h2 className="heading__wishlist">My WishList</h2>
+        <h2 className="heading__wishlist">My WishList ({wishList.length})</h2>
       </div>
-      {<WishListCompo />}
+      <div className="wishListCompo">
+        {wishList.length > 0 ? (
+          <div>
+            {wishList.map((items) => (
+              <WishListCompo items={items} />
+            ))}
+          </div>
+        ) : (
+          <h1>😥Your WishList is Empty! Add Some</h1>
+        )}
+      </div>
     </>
   );
 };
