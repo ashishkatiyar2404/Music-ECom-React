@@ -1,10 +1,6 @@
-import { createContext } from "react";
-import { useContext, useReducer } from "react/cjs/react.production.min";
+import { createContext, useContext, useReducer } from "react";
 
-const demoValue = {
-  value: 10,
-};
-
+// intial state is not the final intial state
 const intialState = {
   products: [],
   cart: [],
@@ -14,12 +10,16 @@ const intialState = {
 const ProductContext = createContext(demoValue);
 
 function ProductsProvider({ children }) {
-  const [intialState, dispatch] = useReducer(ProductReducer, intialState);
-  //   useEffect(() => {
-  //     ()();
-  //   }, [])
+  const [ProductInitialState, dispatchProduct] = useReducer(
+    ProductReducerFunc,
+    intialState
+  );
 
-  return <ProductContext.Provider>{children}</ProductContext.Provider>;
+  return (
+    <ProductContext.Provider value={{ ProductInitialState, dispatchProduct }}>
+      {children}
+    </ProductContext.Provider>
+  );
 }
 
 const useProduct = () => useContext(ProductContext);

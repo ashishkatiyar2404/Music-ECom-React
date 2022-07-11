@@ -1,0 +1,103 @@
+:root {
+  --color-btn-cart: rgb(255, 69, 0);
+  --color-btn-bg-white: rgb(255, 255, 255);
+}
+
+.heading__container,
+.checkout__container {
+  text-align: center;
+  margin: 3% 0 2% 0;
+}
+.heading__cart {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.section {
+  display: flex;
+  justify-content: space-evenly;
+  /* padding: 1rem 2rem; */
+}
+.card__quantity {
+  width: 40%;
+  /* height: 30%; */
+}
+.quantity__container label {
+  font-weight: 500;
+}
+
+.img__horizontal {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  display: flex;
+}
+.img__Container {
+  padding: 1rem;
+  width: 50%;
+}
+img {
+  height: 100%;
+  width: 100%;
+}
+.grid {
+  width: 100%;
+  margin: 0.8rem;
+}
+.info h1,
+.info span {
+  margin: 0rem;
+}
+.img__rating-price span,
+.img__rating-price p {
+  margin-top: 0.5rem;
+}
+
+.big__buttons {
+  padding-top: 0.5rem;
+  display: flex;
+}
+.move__wishlist {
+  background-color: var(--color-btn-bg-white);
+  color: var(--color-btn-cart);
+  border: 1px solid var(--color-btn-cart);
+  width: 40%;
+  padding: 0.5rem;
+  cursor: pointer;
+  margin-left: 0.2rem;
+}
+
+.remove2cart {
+  width: 40%;
+  cursor: pointer;
+  background-color: var(--color-btn-cart);
+  color: var(--color-btn-bg-white);
+  border: 0;
+  padding: 0.5rem;
+  margin-right: 0.2rem;
+}
+
+/* CHECKOUT */
+.checkout__container {
+  padding: 1rem;
+  border: 2px solid gray;
+  border-radius: 2px;
+}
+.flex {
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem 0rem;
+  padding: 0.5rem;
+  border-bottom: 1px solid gray;
+}
+.place__order > * {
+  display: block;
+  margin: 1rem 0rem;
+}
+
+.place__order button {
+  width: 100%;
+  cursor: pointer;
+  background-color: var(--color-btn-cart);
+  color: var(--color-btn-bg-white);
+  border: 0;
+  padding: 0.5rem;
+}

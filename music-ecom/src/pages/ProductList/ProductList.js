@@ -1,5 +1,6 @@
 import React from "react";
-import Navbar from "../../Components/Navbar/Navbar";
+// import Navbar from "../../Components/Navbar/Navbar";
+// import axios from "axios";
 import "./ProductList.css";
 import { products } from "../../backend/db/products";
 import ProductCard from "../../Components/ProductCard/ProductCard";
@@ -7,6 +8,28 @@ import Filter from "../../Components/Filter/Filter";
 import { useFilter } from "../../Context/filterContext";
 
 export default function ProductList() {
+  // FETCHING PRODUCT
+  /* const [ashishProducts, setProducts] = useState();
+
+  const fetchAllProcuts = () => {
+    (async () => {
+      try {
+        const {
+          data: { products },
+        } = await axios.get("/api/products");
+
+        console.log(products);
+      } catch (err) {
+        console.log("HUM HAI ERROR", err);
+      }
+    })();
+  };
+
+  useEffect(() => {
+    fetchAllProcuts();
+  }, []);
+  */
+
   const {
     filterInitialState: {
       categoryName,
@@ -16,7 +39,6 @@ export default function ProductList() {
       price,
     },
   } = useFilter();
-  console.log(price, typeof price);
 
   const transformProducts = () => {
     let sortedProducts = [...products];
@@ -52,8 +74,7 @@ export default function ProductList() {
 
   return (
     <>
-      <Navbar />
-
+      {/* <Navbar /> */}
       <div className="flex-container product__page">
         <div className="filter__fixed">
           <Filter />

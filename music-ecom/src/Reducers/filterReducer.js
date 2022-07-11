@@ -1,5 +1,3 @@
-// import React from "react";
-
 const initialStateOfProduct = {
   categoryName: [],
   price: 11000,
@@ -9,9 +7,6 @@ const initialStateOfProduct = {
 };
 
 const filterReducerFunc = (filterState, filterAction) => {
-  // console.log(filterAction.type);
-  // console.log(filterState, "HI");
-  // console.log(initialStateOfProduct, "Bye");
   switch (filterAction.type) {
     case "SortByPrice":
       return { ...filterState, sortBy: filterAction.payload };
