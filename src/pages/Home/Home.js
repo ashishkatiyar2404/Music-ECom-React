@@ -25,6 +25,7 @@ export default function Home() {
       filterInitialDispatch({ type: "CLEAR_ALL" });
     };
     clearFilter();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

@@ -1,7 +1,7 @@
 import React from "react";
 import SingleCard from "./SingleCard";
 import { useCart } from "../../Context/CartContext";
-import cartReducerFunc from "../../Reducers/CartReducer";
+// import cartReducerFunc from "../../Reducers/CartReducer";
 // import "./SingleCard.css";
 
 const CartManagement = () => {
@@ -36,10 +36,10 @@ const CartManagement = () => {
             {/* {cart.map((items) => (
               <span>{items.price}</span>
             ))} */}
-            {cart.map((items) => {
+            {/* {cart.map((items) => {
               let totalPrice = +items.price;
               <div>{totalPrice}</div>;
-            })}
+            })} */}
           </span>
           <span>Total -₹2,200</span>
         </div>
